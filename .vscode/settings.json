@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "146.190.1.243",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "CSE340 Database",
+            "database": "furta31640",
+            "username": "furta31640"
+        }
+    ]
+}
