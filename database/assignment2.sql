@@ -26,7 +26,7 @@ VALUES (Tony, Stark, tony@starkent.com, Iam1ronM@n);
 
 
 
-SELECT * FROM public.personnel WHERE id = ????;
+SELECT * FROM public.personnel WHERE id = 1;
 
 UPDATE personnel
 SET account_type = 'Admin'
@@ -35,16 +35,22 @@ WHERE primary_key = for Tony Stark;
 
 
 DELETE FROM public.personnel
-WHERE id = ????;
+WHERE id = 1;
 
 
--- The description update SQL statement works.
-
-
-
--- The select query using a JOIN SQL statement works.
+UPDATE cars
+SET car_description = REPLACE(description_column, 'small interiors', 'a huge interior')
+WHERE car_name = 'GM Hummer';
 
 
 
--- The inv_image and inv_thumbnail update query works.
+SELECT inventory.make, inventory.model, classification.classification_name
+FROM inventory
+INNER JOIN classification ON inventory.classification_id = classification.classification_id
+WHERE classification.classification_name = 'Sport';
 
+
+
+UPDATE inventory
+SET inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),
+    inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/');
