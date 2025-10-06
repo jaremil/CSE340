@@ -1,3 +1,16 @@
+CREATE TABLE public.inventory (
+    id SERIAL PRIMARY KEY,
+    make VARCHAR(50) NOT NULL, 
+    model VARCHAR(50) NOT NULL, 
+    inv_image VARCHAR(50),
+    inv_thumbnail VARCHAR(50)
+);
+
+CREATE TABLE public.classification (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+)
+
 CREATE TABLE public.personnel (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
