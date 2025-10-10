@@ -1,0 +1,9 @@
+"configurations": [{
+    "name": "Launch CSE Motors",
+    "program": "${workspaceFolder}/server.js",
+    "request": "launch",
+    "skipFiles": [
+        "<node_internals>**"
+    ],
+    "type": "node"
+}]
